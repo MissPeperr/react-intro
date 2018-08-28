@@ -1,0 +1,29 @@
+.kennel {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  margin-top: 10em;
+}
+#login-form {
+  margin-top: 5rem;
+}
+
+.locations {
+  margin-top: 5rem;
+}
+.animals {
+  margin-top: 5rem;
+}
+.animalForm {
+  margin-top: 5rem;
+}
+.employees {
+  margin-top: 5rem;
+}
+.owners {
+  margin-top: 5rem;
+}
+.card {
+  display: flex;
+  justify-content: space-between;
+}

@@ -1,0 +1,44 @@
+
+.owners {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.owners h2 {
+    display: flex;
+    justify-content: center;
+}
+.owner-cards > .card {
+    margin: 2rem 2rem 2rem 2rem;
+}
+.owner-cards {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+#delete-owner-btn {
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    max-width: 50%;
+    min-width: 50%;
+}
+#add-owner-btn {
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    max-width: 25%;
+    min-width: 25%;
+}
+.ownerForm {
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+    margin: 5rem;
+}
+#owner-submit-btn {
+    max-width: 15%;
+    min-width: 15%;
+}

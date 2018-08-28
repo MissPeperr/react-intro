@@ -1,0 +1,106 @@
+{
+  "employees": [
+    {
+      "id": 1,
+      "name": "Jessica Younker",
+      "locationId": 2
+    },
+    {
+      "id": 3,
+      "name": "Zoe LeBlanc",
+      "locationId": 1
+    },
+    {
+      "id": 4,
+      "name": "Meg Ducharme",
+      "locationId": 2
+    },
+    {
+      "id": 5,
+      "name": "Jenna Solis",
+      "locationId": 1
+    },
+    {
+      "name": "Hank Wilson",
+      "locationId": 1,
+      "id": 6
+    },
+    {
+      "name": "Madi Peper",
+      "locationId": 2,
+      "id": 7
+    },
+    {
+      "name": "Brenda Long",
+      "locationId": 2,
+      "id": 8
+    },
+    {
+      "name": "Steve Brownlee",
+      "locationId": 1,
+      "id": 9
+    }
+  ],
+  "locations": [
+    {
+      "id": 1,
+      "name": "Nashville North",
+      "address": "500 Puppy Way, Nashville, TN"
+    },
+    {
+      "id": 2,
+      "name": "Nashville South",
+      "address": "867 Puppydog Lane, Nashville, TN"
+    }
+  ],
+  "animals": [
+    {
+      "id": 1,
+      "name": "Bonnie",
+      "employeeId": 3,
+      "type": "dog"
+    },
+    {
+      "name": "Jessie",
+      "type": "Cat",
+      "employeeId": 8,
+      "id": 21
+    },
+    {
+      "name": "Mr. Whiskers II",
+      "type": "Cat",
+      "employeeId": 4,
+      "id": 22
+    },
+    {
+      "name": "Doodles",
+      "type": "Labradoodle",
+      "employeeId": 9,
+      "id": 23
+    },
+    {
+      "name": "Spot",
+      "type": "Akita",
+      "employeeId": 5,
+      "id": 24
+    }
+  ],
+  "owners": [
+    {
+      "id": 1,
+      "name": "Madison Peper",
+      "phoneNumber": "615-812-2717"
+    },
+    {
+      "name": "Jonathan DamnSon",
+      "phoneNumber": "487-245-6534",
+      "id": 2
+    },
+    {
+      "name": "Helen Chalmers",
+      "phoneNumber": "234-543-7584",
+      "id": 3
+    }
+  ],
+  "animalOwners": []
+}

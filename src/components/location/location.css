@@ -1,0 +1,17 @@
+.locations h2 {
+    color: darkred;
+}
+
+.locations h4 {
+    margin-top: 2rem;
+    color: rgb(10, 60, 209);
+}
+
+#empl-h5 {
+    text-decoration: underline;
+    color: rgb(10, 60, 209);
+}
+
+.employee-location-card {
+    margin-top: 1rem;
+}

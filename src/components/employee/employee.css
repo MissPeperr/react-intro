@@ -1,0 +1,52 @@
+.employees {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.employees h2 {
+    display: flex;
+    justify-content: center;
+}
+.employee-cards {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.employee-cards .card {
+    max-width: 75%;
+    min-width: 75%;
+}
+.animal--caretaker {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.animal--caretaker .animal-card {
+    max-width: 20%;
+}
+#add-employee-btn {
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    max-width: 25%;
+    min-width: 25%;
+}
+#delete-employee-btn {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    max-width: 60%;
+    min-width: 60%;
+}
+.employeeForm {
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+    margin: 5rem;
+}
+#employee-submit-btn {
+    max-width: 15%;
+    min-width: 15%;
+}
