@@ -10,6 +10,13 @@
     flex-direction: row;
     flex-wrap: wrap;
 }
+.animal-card {
+    margin: auto;
+    max-height: 20rem;
+    min-height: 20rem;
+    max-width: 10rem;
+    min-width: 10rem;
+}
 
 .animalButton {
     display: flex;

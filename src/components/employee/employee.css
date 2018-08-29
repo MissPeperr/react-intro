@@ -14,7 +14,9 @@
     flex-direction: row;
     flex-wrap: wrap;
 }
-.employee-cards .card {
+.employee-card {
+    max-height: 25rem;
+    min-height: 25rem;
     max-width: 75%;
     min-width: 75%;
 }
@@ -24,6 +26,7 @@
     flex-wrap: wrap;
 }
 .animal--caretaker .animal-card {
+    margin: auto;
     max-width: 20%;
 }
 #add-employee-btn {

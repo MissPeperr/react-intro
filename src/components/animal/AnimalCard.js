@@ -1,25 +1,37 @@
-import React, { Component } from "react"
+import React from "react"
+import PropType from "prop-types"
 import { Link } from "react-router-dom"
 import dog from "./DogIcon.png"
 import "./animal.css"
 
-export default class AnimalCard extends Component {
-    render() {
+const AnimalCard = ({animal}) => {
         return (
-            <div key={this.props.animal.id} className="card animal-card">
+            <div key={animal.id} className="card animal-card">
                 <div className="card-body">
                     <h5 className="card-title">
                         <img src={dog} alt="pupper" className="icon--dog" />
-                        {this.props.animal.name}
-                        <Link className="nav-link" to={`/animals/${this.props.animal.id}`}>Details</Link>
-                        <Link onClick={() => this.props.editAnimal("animals", this.props.animal.id)}
-                            className="nav-link" to={`/animals/edit/${this.props.animal.id}`}>Edit Animal</Link>
+                        {animal.name}
+                        <div>
+                        <Link className="nav-link" to={`/animals/${animal.id}`}>Details</Link>
+                        </div>
+                        <div className="link-div">
+                        <Link className="nav-link" to={`/animals/edit/${animal.id}`}>Edit Animal</Link>
+                        </div>
                         <button
-                            onClick={() => this.props.deleteAnimal(this.props.animal.id)}
+                            onClick={() => this.props.deleteAnimal(animal.id)}
                             className="card-link">Discharge</button>
                     </h5>
                 </div>
             </div>
         )
-    }
 }
+
+AnimalCard.propTypes = {
+    animal: PropType.shape({
+        name: PropType.string.isRequired,
+        type: PropType.string.isRequired,
+        employeeId: PropType.number.isRequired
+        })
+}
+
+export default AnimalCard

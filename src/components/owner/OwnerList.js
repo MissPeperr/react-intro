@@ -15,7 +15,7 @@ export default class OwnerList extends Component {
             <div className="owner-cards">
             {
                 this.props.owners.map((owner) =>
-                <div key={owner.id} className="card">
+                <div key={owner.id} className="card owner-card">
                     <h3 className="card-title">{owner.name}</h3>
                     <button onClick={() => this.props.deleteOwner(owner.id)}
                             className="card-link btn btn-danger"

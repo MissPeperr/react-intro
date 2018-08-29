@@ -30,7 +30,6 @@ export default class AnimalForm extends Component {
                 type: this.state.type,
                 employeeId: this.props.employees.find(e => e.name === this.state.employee).id
             }
-
             // Create the animal and redirect user to animal list
             this.props.saveAnimal("animals", animal).then(() => this.props.history.push("/animals"))
         }

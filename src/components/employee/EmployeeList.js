@@ -1,10 +1,12 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
-import AnimalCard from '../animal/AnimalCard'
+// import { Link } from 'react-router-dom'
+import EmployeeCard from './EmployeeCard'
 
 
 export default class EmployeeList extends Component {
     render() {
+        const animals = this.props.animals
+        console.log("animalsss", animals)
         return (
             // EVERYTHING IN HERE IS NOT HTML
             // THIS IS XML!
@@ -17,27 +19,16 @@ export default class EmployeeList extends Component {
                     Quick Add Employee
             </button>
             <div className="employee-cards">
+
+                {/* 
+                    Here we are passing a key, the employees, and the animals to the EmployeeCard.js
+                    Key is the id of the employee
+                    Employee is the list of employees
+                    Animals is the list of animals
+                */}
             {
                 this.props.employees.map((employee) =>
-                    <div key={employee.id} className="card">
-                        <h3>
-                        {employee.name}
-                        </h3>
-                        <Link className="nav-link" to={`/employees/${employee.id}`}>Details</Link>
-                        <button
-                                    onClick={() => this.props.deleteEmployee(employee.id)}
-                                    className="card-link btn btn-danger"
-                                    id="delete-employee-btn">Fire Employee
-                        </button>
-                        <h6 class="card-subtitle mb-2 text-muted">Caretaker For</h6>
-                    <div className="animals--caretaker">
-                    {
-                        this.props.animals
-                            .filter(anml => anml.employeeId === employee.id)
-                            .map(anml => <AnimalCard key={anml.id} animal={anml} {...this.props} />)
-                    }
-                    </div>
-                    </div>
+                   <EmployeeCard key={employee.id} employee={employee} animals={animals} {...this.props}/>
                     
                 )
             }
@@ -46,39 +37,3 @@ export default class EmployeeList extends Component {
         )
     }
 }
-
-/*
- THIS IS HOW IT WOULD LOOK LIKE IN VANILLA JAVASCRIPT:
-
-const state = {
-    locations = [
-        {
-            name: "Nashville North",
-            address: "500 Puppy Way"
-        },
-        {
-            name: "Nashville North",
-            address: "576 Puppy Way"
-        }
-    ],
-    employees = [
-        {
-            name: "Meg Ducharme"
-        },
-        {
-            name: "Blaise Roberts"
-        }
-    ]
-}
-
-function printEmployee (employee) {
-    return `<div id={employee.id}>
-                {employee.name}
-            </div>`
-}
-
-state.employees.forEach(employee =>
-    document.querySelector(".employees").innerHTML += printEmployee(employee)
-)
-*/
-
