@@ -1,11 +1,6 @@
 {
   "employees": [
     {
-      "id": 1,
-      "name": "Jessica Younker",
-      "locationId": 2
-    },
-    {
       "id": 3,
       "name": "Zoe LeBlanc",
       "locationId": 1
@@ -61,20 +56,14 @@
       "type": "dog"
     },
     {
-      "name": "Jessie",
-      "type": "Cat",
+      "name": "Jessiieieieieie",
+      "type": "Kitty",
       "employeeId": 8,
       "id": 21
     },
     {
-      "name": "Mr. Whiskers II",
-      "type": "Cat",
-      "employeeId": 4,
-      "id": 22
-    },
-    {
-      "name": "Doodles",
-      "type": "Labradoodle",
+      "name": "Doodles IV",
+      "type": "Dog",
       "employeeId": 9,
       "id": 23
     },
@@ -83,6 +72,36 @@
       "type": "Akita",
       "employeeId": 5,
       "id": 24
+    },
+    {
+      "name": "New Animal Yo",
+      "type": "Kitty",
+      "employeeId": 6,
+      "id": 25
+    },
+    {
+      "name": "Dogmeat",
+      "type": "Dog",
+      "employeeId": 7,
+      "id": 26
+    },
+    {
+      "name": "Mr. Whiskers III",
+      "type": "Kitty Cat",
+      "employeeId": 4,
+      "id": 27
+    },
+    {
+      "name": "Kitty",
+      "type": "Cat",
+      "employeeId": 8,
+      "id": 28
+    },
+    {
+      "name": "Biscuit",
+      "type": "Cat",
+      "employeeId": 7,
+      "id": 29
     }
   ],
   "owners": [

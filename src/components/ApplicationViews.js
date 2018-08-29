@@ -1,6 +1,6 @@
 import { Route, Redirect } from 'react-router-dom'
 import React, { Component } from "react"
-import Login from './Login.js'
+import Login from './Login'
 import EditAnimal from './animal/EditAnimal'
 import AnimalDetail from './animal/AnimalDetail'
 import AnimalForm from './animal/AnimalForm'
@@ -35,31 +35,19 @@ export default class ApplicationViews extends Component {
 
     componentDidMount() {
         console.log("component mounted!")
+        const newState = {}
 
         // need to pass each object into the getAll()
         DataManager.getAll("animals")
-        .then(allAnimals => {
-            this.setState({
-                animals: allAnimals
-            })
-        })
+        .then(allAnimals => newState.animals = allAnimals)
         DataManager.getAll("employees")
-        .then(allEmployees => {
-            this.setState({
-                employees: allEmployees
-            })
-        })
+        .then(allEmployees => newState.employees = allEmployees)
         DataManager.getAll("locations")
-        .then(allLocations =>{
-            this.setState({
-                locations: allLocations
-            })
-        })
+        .then(allLocations => newState.locations = allLocations)
         DataManager.getAll("owners")
-        .then(allOwners => {
-            this.setState({
-                owners: allOwners
-            })
+        .then(allOwners => newState.owners = allOwners)
+        .then(() => {
+            this.setState(newState)
         })
     }
 
@@ -115,17 +103,19 @@ export default class ApplicationViews extends Component {
     render(){
         console.log("render!")
         /*
-            exact is needed on the first route, otherwise it will also match the other two routes, 
-            and the LocationList will be the only component rendered, no matter what the URL is.
+            *--exact is needed on the first route, otherwise it will also match the other two routes, 
+                and the LocationList will be the only component rendered, no matter what the URL is.
 
-            The <Link/> and the <Route/> JSX elements are complementary to each other. If you add a new Link element in your application with a new URL, then you must create a matching Route element.
+            The <Link/> and the <Route/> JSX elements are complementary to each other. 
+            If you add a new Link element in your application with a new URL, then you must create a matching Route element.
             EX: www.google.com/aboutus
                                         V-- THE LINK THAT WAS ROUTED TO THE HOMEPAGE
                 http://localhost:3000/animals
 
-            By adding this route, "/animals/:animalId(\d+)" you are setting up your application to view a single animal at a time, and you determine which animal is to be viewed by looking in the URL. The animal's primary key will be the last part of the URL path.
+            By adding this route, "/animals/:animalId(\d+)" you are setting up your application to view a single animal at a time, 
+            and you determine which animal is to be viewed by looking in the URL. The animal's primary key will be the last part of the URL path.
 
-            The (\d+) is looking for numbers ONLY
+            *--The (\d+) is looking for numbers ONLY
         */
         return (
             <React.Fragment>
@@ -148,7 +138,8 @@ export default class ApplicationViews extends Component {
                 }} />
                 <Route path="/animals/new" render={(props) => {
                     return <AnimalForm {...props} saveAnimal={this.saveAnimal}
-                                                  employees={this.state.employees} />
+                                                  employees={this.state.employees}
+                                                  owners={this.state.owners} />
                 }} />
                 <Route exact path="/animals/edit/:animalId(\d+)" render={(props) => {
                     return <EditAnimal {...props} editAnimal={this.editAnimal} 
@@ -182,7 +173,8 @@ export default class ApplicationViews extends Component {
                 }} />
                 <Route exact path="/owners/:ownerId(\d+)" render={(props) => {
                     return <OwnerDetail {...props} deleteOwner={this.deleteOwner}
-                                                   owners={this.state.owners} />
+                                                   owners={this.state.owners}
+                                                   animals={this.state.animals} />
                 }} />
                 <Route path="/owners/new" render={(props) => {
                     return <OwnerForm {...props} saveOwner={this.saveOwner} 

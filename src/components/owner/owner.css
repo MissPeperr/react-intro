@@ -9,8 +9,12 @@
     display: flex;
     justify-content: center;
 }
-.owner-cards > .card {
-    margin: 2rem 2rem 2rem 2rem;
+.owner-card {
+    margin: auto;
+    max-height: 15rem;
+    min-height: 15rem;
+    max-width: 10rem;
+    min-width: 10rem;
 }
 .owner-cards {
     display: flex;

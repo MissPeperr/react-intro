@@ -18,6 +18,7 @@ export default class AnimalList extends Component {
                     this.props.animals.map(animal =>
                         <AnimalCard key={animal.id} animal={animal} {...this.props} />
                     )
+                    
                 }
                 </section>
             </React.Fragment>
