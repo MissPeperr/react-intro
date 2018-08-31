@@ -4,7 +4,7 @@ import { Link } from "react-router-dom"
 import dog from "./DogIcon.png"
 import "./animal.css"
 
-const AnimalCard = ({animal}) => {
+const AnimalCard = ({animal, deleteAnimal}) => {
         return (
             <div key={animal.id} className="card animal-card">
                 <div className="card-body">
@@ -18,10 +18,10 @@ const AnimalCard = ({animal}) => {
                         <Link className="nav-link" to={`/animals/edit/${animal.id}`}>Edit Animal</Link>
                         </div>
                         <button
-                            onClick={() => this.props.deleteAnimal(animal.id)}
+                            onClick={() => deleteAnimal(animal.id)}
                             className="card-link">Discharge</button>
                     </h5>
-                </div>
+                    </div>
             </div>
         )
 }
@@ -30,7 +30,8 @@ AnimalCard.propTypes = {
     animal: PropType.shape({
         name: PropType.string.isRequired,
         type: PropType.string.isRequired,
-        employeeId: PropType.number.isRequired
+        employeeId: PropType.number.isRequired,
+        id: PropType.number.isRequired
         })
 }
 

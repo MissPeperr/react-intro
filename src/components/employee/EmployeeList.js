@@ -28,7 +28,7 @@ export default class EmployeeList extends Component {
                 */}
             {
                 this.props.employees.map((employee) =>
-                   <EmployeeCard key={employee.id} employee={employee} animals={animals} {...this.props}/>
+                   <EmployeeCard key={employee.id} employee={employee} animals={animals} deleteEmployee={this.props.deleteEmployee} {...this.props}/>
                     
                 )
             }

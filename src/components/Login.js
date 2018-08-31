@@ -36,14 +36,17 @@ export default class Login extends Component {
                    password: this.state.password
                })
            )
+           this.props.history.push("/animals")
        } else {
         sessionStorage.setItem(
-            "loserCredentials",
+            "credentials",
             JSON.stringify({
                 email: this.state.email,
                 password: this.state.password
             })
         )
+        this.props.history.push("/animals")
+
        }
     }
 
@@ -74,3 +77,4 @@ export default class Login extends Component {
         )
     }
 }
+

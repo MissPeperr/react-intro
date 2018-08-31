@@ -1,26 +1,6 @@
 {
   "employees": [
     {
-      "id": 3,
-      "name": "Zoe LeBlanc",
-      "locationId": 1
-    },
-    {
-      "id": 4,
-      "name": "Meg Ducharme",
-      "locationId": 2
-    },
-    {
-      "id": 5,
-      "name": "Jenna Solis",
-      "locationId": 1
-    },
-    {
-      "name": "Hank Wilson",
-      "locationId": 1,
-      "id": 6
-    },
-    {
       "name": "Madi Peper",
       "locationId": 2,
       "id": 7
@@ -34,6 +14,21 @@
       "name": "Steve Brownlee",
       "locationId": 1,
       "id": 9
+    },
+    {
+      "name": "Dijon Mustard",
+      "locationId": 2,
+      "id": 10
+    },
+    {
+      "name": "Hank Wilson",
+      "locationId": 2,
+      "id": 11
+    },
+    {
+      "name": "Meg Ducharme",
+      "locationId": 2,
+      "id": 12
     }
   ],
   "locations": [
@@ -46,21 +41,14 @@
       "id": 2,
       "name": "Nashville South",
       "address": "867 Puppydog Lane, Nashville, TN"
+    },
+    {
+      "id": 3,
+      "name": "Nashville West",
+      "address": "134 Perfectday Way, Nashville, TN"
     }
   ],
   "animals": [
-    {
-      "id": 1,
-      "name": "Bonnie",
-      "employeeId": 3,
-      "type": "dog"
-    },
-    {
-      "name": "Jessiieieieieie",
-      "type": "Kitty",
-      "employeeId": 8,
-      "id": 21
-    },
     {
       "name": "Doodles IV",
       "type": "Dog",
@@ -68,40 +56,64 @@
       "id": 23
     },
     {
-      "name": "Spot",
-      "type": "Akita",
-      "employeeId": 5,
-      "id": 24
+      "name": "Biscuit",
+      "type": "Cat",
+      "employeeId": 11,
+      "id": 29
     },
     {
-      "name": "New Animal Yo",
+      "name": "Oinkers III",
+      "type": "Piggy",
+      "employeeId": 8,
+      "id": 30
+    },
+    {
+      "name": "Spot",
+      "type": "Doodle",
+      "employeeId": 11,
+      "id": 31
+    },
+    {
+      "name": "Giovannii",
       "type": "Kitty",
-      "employeeId": 6,
-      "id": 25
+      "employeeId": 12,
+      "id": 32
+    },
+    {
+      "name": "Jessi",
+      "type": "Calico Kitty",
+      "employeeId": 8,
+      "id": 33
+    },
+    {
+      "name": "Maisey",
+      "type": "Calico Kitty",
+      "employeeId": 7,
+      "id": 34
+    },
+    {
+      "name": "Bonnie",
+      "type": "Pitbull Mix",
+      "employeeId": 7,
+      "id": 35
     },
     {
       "name": "Dogmeat",
-      "type": "Dog",
-      "employeeId": 7,
-      "id": 26
+      "type": "Mutt",
+      "employeeId": 11,
+      "id": 36
     },
     {
-      "name": "Mr. Whiskers III",
-      "type": "Kitty Cat",
-      "employeeId": 4,
-      "id": 27
-    },
-    {
-      "name": "Kitty",
-      "type": "Cat",
-      "employeeId": 8,
-      "id": 28
-    },
-    {
-      "name": "Biscuit",
+      "name": "Bubbles",
       "type": "Cat",
       "employeeId": 7,
-      "id": 29
+      "id": 37
+    },
+    {
+      "name": "animals",
+      "type": "sdfgjhsdgfj",
+      "employeeId": 7,
+      "id": 38
     }
   ],
   "owners": [

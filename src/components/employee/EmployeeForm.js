@@ -4,7 +4,8 @@ import './employee.css'
 export default class EmployeeForm extends Component {
     // Set initial state
     state = {
-        name: ""
+        name: "",
+        locationId: ""
     }
 
     // Update state whenever an input field is edited
@@ -22,6 +23,7 @@ export default class EmployeeForm extends Component {
         event.preventDefault()
             const employee = {
                 name: this.state.name,
+                locationId: this.props.locations.find(L => L.name === this.state.locationId).id
             }
 
             // Create the employee and redirect user to employee list
@@ -33,12 +35,20 @@ export default class EmployeeForm extends Component {
             <React.Fragment>
                 <form className="employeeForm">
                     <div className="form-group">
-                        <label htmlFor="employeeName">Employee Full Name</label>
+                        <label htmlFor="employeeName">Employee Full Name:</label>
                         <input type="text" required="true"
                                className="form-control"
                                onChange={this.handleFieldChange}
                                id="name"
                                placeholder="Employee name" />
+                    </div>
+                    <div className="form-group">
+                        <label htmlFor="location">Assign to a Location:</label>
+                        <select name="locationId" id="locationId" onChange={this.handleFieldChange}>
+                        {
+                            this.props.locations.map(location => <option key={location.id} id={location.id}>{location.name}</option>)
+                        }
+                        </select>
                     </div>
                     <button type="submit" onClick={this.constructNewEmployee} className="btn btn-info" id="employee-submit-btn">Submit</button>
                 </form>

@@ -20,7 +20,7 @@ import AnimalCard from '../animal/AnimalCard'
         6. We're taking the function EmployeeCard, and adding propTypes to it.
 */
 
-const EmployeeCard = ({employee, animals}) => {
+const EmployeeCard = ({employee, animals, deleteEmployee}) => {
         return (
         /*--1--*/
         <div key={employee.id} className="card employee-card">
@@ -32,7 +32,7 @@ const EmployeeCard = ({employee, animals}) => {
         <Link className="nav-link" to={`/employees/${employee.id}`}>Details</Link>
         {/*--4--*/}
         <button         /*--4a--*/
-                    onClick={() => this.props.deleteEmployee(employee.id)}
+                    onClick={() => deleteEmployee(employee.id)}
                     className="card-link btn btn-danger"
                     id="delete-employee-btn">Fire Employee
         </button>
