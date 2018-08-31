@@ -17,6 +17,11 @@
     max-width: 10rem;
     min-width: 10rem;
 }
+.animal-card:after{
+    content: "";
+    display: table;
+    clear: both;
+}
 
 .animalButton {
     display: flex;
